@@ -102,7 +102,7 @@
 
 OpenClaw is an **agentic AI interface** that:
 
-- Runs **locally on your own hardware** (Mac Mini, VPS, Raspberry Pi, or serverless)
+- Runs **locally on your own hardware** (Mac Mini, VPS, Raspberry Pi, ESP32-S3, or serverless)
 - Connects to **10+ messaging platforms** simultaneously
 - Has **persistent memory** across sessions (saves files, breadcrumbs, chat histories)
 - Handles **tasks spanning hours or days** without losing context
@@ -187,6 +187,7 @@ That's it. The wizard walks you through API key setup, channel configuration, an
 | **xCloud Managed** | 5 min | None | Full managed hosting |
 | **Manual VPS** | 10 min | Medium | Full control |
 | **Raspberry Pi** | 10 min | Medium | Low-power, always-on |
+| **ESP32-S3 ([MimiClaw](https://github.com/memovai/mimiclaw))** | 10 min | Medium | Cheapest hardware ($5), pure C, no OS |
 
 ### Method 1: Official Installer Script
 
@@ -348,6 +349,7 @@ Hire someone to set it up for you.
 | xCloud Managed | **$24** | 5 min | **None** | **Yes** | Full managed hosting |
 | ClawCloud Starter | **$29** | < 1 min | **None** | **Yes** | Premium managed |
 | Raspberry Pi 5 | **$0**/mo | 30 min | Medium | No | Low-power, always-on |
+| ESP32-S3 (MimiClaw) | **$0**/mo | 10 min | Medium | No | Cheapest ($5 chip), no OS |
 | Mac Mini | **$0**/mo | 10 min | Easy | No | Privacy-first, local |
 
 ---
@@ -408,6 +410,7 @@ The **real cost** of running OpenClaw is the AI model API, not infrastructure.
 | **Managed Easy** | xCloud ($24) | Mixed ($30) | **$54** | Zero technical setup |
 | **Cloudflare** | Workers ($5+$30) | Mixed ($20) | **$55** | Serverless architecture |
 | **Local LLM** | Raspberry Pi 5 ($0/mo) | Ollama ($0) | **$0** | After $80 hardware purchase |
+| **Embedded** | ESP32-S3 ($0/mo) | Claude API ($5) | **$5** | After $5 hardware purchase (MimiClaw) |
 | **Power User** | DigitalOcean ($24) | Opus ($200) | **$224** | Heavy professional use |
 | **Extreme** | Dedicated ($50) | All models ($573) | **$623** | One developer's real report |
 
@@ -837,6 +840,7 @@ tar -czvf ~/openclaw_backup_$(date +%Y%m%d).tar.gz -C "$HOME" .openclaw
 | **Typical CPU** | ~13.5 t/s | Non-time-critical tasks |
 | **Oracle ARM (7B)** | 5-10 t/s | Free tier, acceptable |
 | **Raspberry Pi 5** | 2-5 t/s | Slow but works |
+| **ESP32-S3 (MimiClaw)** | Cloud API | No local inference, calls Claude API via Wi-Fi |
 
 ### Memory for Local Models
 
@@ -1044,6 +1048,7 @@ Capabilities: CDP, ARIA snapshots, screenshots, tab management, click/type/drag,
 ### Local Hardware
 
 - [Raspberry Pi - ajfisher](https://ajfisher.me/2026/02/03/openclaw-raspberrypi-howto/) | [Adafruit](https://learn.adafruit.com/openclaw-on-raspberry-pi)
+- [ESP32-S3 MimiClaw](https://github.com/memovai/mimiclaw) — OpenClaw core on a $5 chip, pure C, no Linux/Node.js
 - [Ollama Guide](https://codersera.com/blog/openclaw-ollama-setup-guide-2026/) | [LM Studio](https://codersera.com/blog/openclaw-lm-studio-setup-guide-2026/)
 - [vLLM on AMD Free](https://www.amd.com/en/developer/resources/technical-articles/2026/openclaw-with-vllm-running-for-free-on-amd-developer-cloud-.html)
 
