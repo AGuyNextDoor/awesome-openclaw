@@ -56,6 +56,7 @@
 - [Hostinger VPS Setup](#hostinger-vps-setup)
 - [Oracle Cloud Free Tier Setup](#oracle-cloud-free-tier-setup)
 - [Raspberry Pi Setup](#raspberry-pi-setup)
+- [ESP32 Embedded (MimiClaw)](#esp32-embedded-mimiclaw)
 - [Docker Deployment](#docker-deployment)
 - [Security & Hardening](#security--hardening)
 - [Configuration](#configuration)
@@ -557,6 +558,26 @@ openclaw onboard --install-daemon
 
 - [OpenClaw on Raspberry Pi - ajfisher](https://ajfisher.me/2026/02/03/openclaw-raspberrypi-howto/)
 - [OpenClaw on Raspberry Pi - Adafruit](https://learn.adafruit.com/openclaw-on-raspberry-pi)
+
+---
+
+## ESP32 Embedded (MimiClaw)
+
+[MimiClaw](https://github.com/memovai/mimiclaw) implements OpenClaw's core principles on a **$5 ESP32-S3** microcontroller. Written entirely in pure C — no Linux, no Node.js, no server infrastructure needed.
+
+| Spec | Detail |
+|------|--------|
+| **Hardware** | ESP32-S3 (16 MB flash, 8 MB PSRAM) |
+| **Cost** | ~$5 (chip only) |
+| **Language** | Pure C (ESP-IDF v5.5+) |
+| **AI Backend** | Anthropic Claude API with ReAct agent loop |
+| **Messaging** | Telegram |
+| **Memory** | Persistent local storage (SOUL.md, USER.md, MEMORY.md on flash) |
+| **Features** | Tool use (web search, time), dual-core processing, WebSocket gateway, runtime CLI config |
+
+The smallest and cheapest way to run an OpenClaw-style AI agent — proving the core architecture (agent loop, persistent memory, tool calling, chat integration) can work without an operating system or runtime environment.
+
+- [GitHub - memovai/mimiclaw](https://github.com/memovai/mimiclaw)
 
 ---
 
@@ -1214,7 +1235,7 @@ node --version                     # Must be 22+
 | [BlockRunAI/ClawRouter](https://github.com/BlockRunAI/ClawRouter) | Smart LLM router (save 78% on costs) |
 | [langbot-app/LangBot](https://github.com/langbot-app/LangBot) | Multi-platform IM bot with OpenClaw |
 | [kiankyars/openclawcourse](https://github.com/kiankyars/openclawcourse) | 1-hour crash course |
-| [memovai/mimiclaw](https://github.com/memovai/mimiclaw) | The world's first OpenClaw on a $5 ESP32-S3 chip — pure C, no Linux, Telegram integration |
+| [memovai/mimiclaw](https://github.com/memovai/mimiclaw) | Implements OpenClaw's core principles (ReAct agent loop, persistent memory, tool use, Telegram) in pure C on a $5 ESP32-S3 — no Linux, no Node.js, no server required |
 
 ---
 
