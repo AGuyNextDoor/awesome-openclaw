@@ -1316,11 +1316,18 @@ OpenClaw has seen explosive adoption in China with support from major tech compa
 
 ---
 
+## Website
+
+This repo powers **[openclawsearch.com](https://openclawsearch.com)** — the website automatically renders this README, so any change here updates the site.
+
+- [Ecosystem Directory](https://openclawsearch.com/directory.html) — 50+ curated projects built with OpenClaw
+
 ## Contributing
 
 Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
-- Add a resource via pull request
+- Add a resource via pull request to `README.md` (auto-updates the website)
+- Add a project to the [Ecosystem Directory](https://openclawsearch.com/directory.html) via pull request to `directory.html`
 - Report broken links via issues
 - Suggest new sections or improvements
 
